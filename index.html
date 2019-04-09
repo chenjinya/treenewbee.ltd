@@ -9,12 +9,30 @@
             width: 35em;
             margin: 0 auto;
         }
+        #tag-wrapper {
+            clear: both;
+        }
     </style>
 </head>
 <body>
 <h1>树新风 Tree New Bee</h1>
 <p>Redefining the Internet</p>
-
-<p>Treenewbee.ltd's CEO is Jinya, a man called God.
+<div id="tag-wrapper"></div>
+<script type="text/javascript">
+    const arr = ["挣钱","孩子","孝顺","事业有成","有车有房","有钱有时间","功成名就","人生巅峰"]
+    const wrapper = document.getElementById('tag-wrapper');
+    const df = document.createDocumentFragment();
+    for(let v of arr) {
+        let rgb = [Math.random() * 255,Math.random() * 255,Math.random() * 255];
+        let span = document.createElement("span");
+        span.innerText = v;
+        span.style.color = 'rgb('+rgb[0]+','+rgb[1]+','+rgb[2]+')';
+        span.style.margin = "10px "
+        span.style.fontSize = (Math.random() * 30 + 16) + 'px'
+        span.style.float = 'left';
+        df.appendChild(span);
+    }
+    wrapper.appendChild(df);
+</script>
 </body>
 </html>
