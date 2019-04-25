@@ -2,37 +2,42 @@
 <!DOCTYPE html ut8>
 <html lang="zh">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>树新风(Tree New Bee)</title>
     <style>
         body {
-            width: 35em;
-            margin: 0 auto;
+           
         }
-        #tag-wrapper {
-            clear: both;
+       
+        #main-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(#FFF, #DDD);
+            background-size: cover;
+        }
+        .main-text {
+            max-width: 35em;
+            margin: 50px;
+            line-height: 2em;
+
+
+
         }
     </style>
 </head>
 <body>
-<h1>树新风 Tree New Bee</h1>
-<p>Redefining the Internet</p>
-<div id="tag-wrapper"></div>
-<script type="text/javascript">
-    const arr = ["挣钱","孩子","孝顺","事业有成","有车有房","有钱有时间","功成名就","人生巅峰"]
-    const wrapper = document.getElementById('tag-wrapper');
-    const df = document.createDocumentFragment();
-    for(let v of arr) {
-        let rgb = [Math.random() * 255,Math.random() * 255,Math.random() * 255];
-        let span = document.createElement("span");
-        span.innerText = v;
-        span.style.color = 'rgb('+rgb[0]+','+rgb[1]+','+rgb[2]+')';
-        span.style.margin = "10px "
-        span.style.fontSize = (Math.random() * 30 + 16) + 'px'
-        span.style.float = 'left';
-        df.appendChild(span);
-    }
-    wrapper.appendChild(df);
-</script>
+    <div id='main-section'>
+        <div class="main-text">
+            认识一哥们一个多月了，感觉对脾气。三天两头路边撸串，再配上些啤酒啥的，我俩各种吹牛逼啊，吹的不要不要的，直到昨天晚上他开着R8过来找我的时候，我才意识到，这他妈一个多月，只是我在吹牛逼，他说的都是真的……
+        </div>
+    </div>
+
 </body>
 </html>
